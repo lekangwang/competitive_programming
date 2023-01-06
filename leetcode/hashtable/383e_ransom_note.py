@@ -2,7 +2,6 @@
 class Solution:
     def canConstruct(self, ransomNote: str, magazine: str) -> bool:
         ht = {}
-        total = len(magazine)
         for ch in magazine:
             if ht.get(ch) == None:
                 ht[ch] = 1
@@ -14,8 +13,6 @@ class Solution:
                 return False 
             else:
                 ht[ch] -= 1
-                total -= 1
             
         return True
-
         
